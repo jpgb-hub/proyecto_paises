@@ -5,12 +5,12 @@ import './Root.css'
 
 
 function Root() {
-  const [pokemons, setPokemons] = useState([]);
+  const [paises, setPaises] = useState([]);
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon/?limit=151")
+    fetch("https://restcountries.com/v3.1/all")
       .then((data) => data.json())
-      .then((data) => setPokemons(data.results));
+      .then((data) => setPaises(data.results));
   }, []);
 
   return (
